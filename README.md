@@ -10,5 +10,15 @@
 
 ## 当前进度
 
-- Week 1 Day 1
-- 主题：Git 和 Wsl 基础
+- Week 1 
+
+- Day 1
+- Git 是什么
+- 仓库、commit、branch、push/pull 的概念
+- WSL 基本目录和常用命令
+
+- Day 2
+- `ls cd pwd mkdir rm cp mv cat`
+- 相对路径 / 绝对路径
+- 文件权限的基本概念
+- 环境变量基本概念
