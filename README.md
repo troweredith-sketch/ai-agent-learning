@@ -33,3 +33,13 @@
 - `pip`
 - `requirements.txt`
 - 为什么项目要隔离环境
+
+
+## Day 4
+
+- Python 项目目录结构
+- `main.py`
+- `utils.py`
+- `config.py`
+- 模块导入
+- `if __name__ == "__main__"`
