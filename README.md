@@ -43,3 +43,14 @@
 - `config.py`
 - 模块导入
 - `if __name__ == "__main__"`
+
+## Day 5
+
+- Git 常见操作：
+    - `status`
+    - `add`
+    - `commit`
+    - `log`
+    - `branch`
+    - `checkout`
+- commit 信息怎么写
