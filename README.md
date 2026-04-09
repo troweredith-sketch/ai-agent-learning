@@ -54,3 +54,9 @@
     - `branch`
     - `checkout`
 - commit 信息怎么写
+
+## Day 6
+
+- Markdown 基础
+- 怎么写学习笔记
+- 怎么写项目 README
