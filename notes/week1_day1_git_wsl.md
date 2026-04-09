@@ -113,7 +113,7 @@ GitHub 是一个**托管 Git 仓库的平台**。
 ```
 git status
 git add .
-git commit-m"提交说明"
+git commit -m "提交说明"
 git push
 ```
 
@@ -155,7 +155,7 @@ ls
 ### 查看完整列表（含隐藏文件）
 
 ```
-ls-la
+ls -la
 ```
 
 ### 切换目录
@@ -170,7 +170,7 @@ cd ..
 
 ```
 mkdir notes
-mkdir-p notes projects weekly_review
+mkdir -p notes projects weekly_review
 ```
 
 ### 创建空文件
@@ -198,26 +198,26 @@ clear
 ### 查看 Git 版本
 
 ```
-git--version
+git --version
 ```
 
 ### 配置用户名和邮箱
 
 ```
-git config--global user.name"你的名字"
-git config--global user.email"你的邮箱"
+git config --global user.name "你的名字"
+git config --global user.email "你的邮箱"
 ```
 
 ### 查看全局配置
 
 ```
-git config--global--list
+git config --global --list
 ```
 
 ### 设置默认分支名为 main
 
 ```
-git config--global init.defaultBranch main
+git config --global init.defaultBranch main
 ```
 
 ---
@@ -239,7 +239,7 @@ git status
 ### 创建 README
 
 ```
-echo"# 我的项目" > README.md
+echo "# 我的项目" > README.md
 ```
 
 ### 加入暂存区
@@ -251,13 +251,13 @@ git add README.md
 ### 提交
 
 ```
-git commit-m"第一次提交"
+git commit -m "第一次提交"
 ```
 
 ### 查看历史
 
 ```
-git log--oneline
+git log --oneline
 ```
 
 ---
@@ -269,13 +269,13 @@ git log--oneline
 ### 生成 SSH 密钥
 
 ```
-ssh-keygen-t ed25519-C"你的GitHub邮箱"
+ssh-keygen -t ed25519 -C "你的GitHub邮箱"
 ```
 
 出现：
 
 ```
-Enter filein which to save the key (/home/用户名/.ssh/id_ed25519):
+Enter file in which to save the key (/home/用户名/.ssh/id_ed25519):
 ```
 
 这里直接按 **回车**，使用默认路径即可。
@@ -285,7 +285,7 @@ Enter filein which to save the key (/home/用户名/.ssh/id_ed25519):
 ### 启动 ssh-agent
 
 ```
-eval"$(ssh-agent -s)"
+eval "$(ssh-agent -s)"
 ```
 
 ### 添加私钥
@@ -309,7 +309,7 @@ cat ~/.ssh/id_ed25519.pub
 ### 测试连接
 
 ```
-ssh-Tgit@github.com
+ssh -T git@github.com
 ```
 
 第一次如果提示确认连接，输入：
@@ -325,7 +325,7 @@ yes
 例如仓库名为 `ai-agent-learning`：
 
 ```
-git clonegit@github.com:你的用户名/ai-agent-learning.git
+git clone git@github.com:你的用户名/ai-agent-learning.git
 cd ai-agent-learning
 ```
 
@@ -334,7 +334,7 @@ cd ai-agent-learning
 ## 12. 创建学习仓库结构
 
 ```
-mkdir-p notes projects weekly_review
+mkdir -p notes projects weekly_review
 touch README.md
 touch notes/week1_day1_git_wsl.md
 ```
@@ -401,7 +401,7 @@ git push
 所以第一次通常要写完整：
 
 ```
-git push-u origin main
+git push -u origin main
 ```
 
 这样 Git 才会记住：
@@ -430,9 +430,9 @@ git push
 
 ```
 git add .
-git commit-m"first commit"
-git branch-M main
-git push-u origin main
+git commit -m "first commit"
+git branch -M main
+git push -u origin main
 ```
 
 ---
@@ -462,7 +462,7 @@ __pycache__/
 ### 覆盖写入文件
 
 ```
-cat > README.md<<'EOF'
+cat > README.md <<'EOF'
 这里写内容
 EOF
 ```
@@ -470,7 +470,7 @@ EOF
 ### 追加内容
 
 ```
-cat >> README.md<<'EOF'
+cat >> README.md <<'EOF'
 这里是追加内容
 EOF
 ```
@@ -484,7 +484,7 @@ EOF
 可以按：
 
 ```
-Ctrl+ C
+Ctrl + C
 ```
 
 取消当前输入，然后重新写。
@@ -508,17 +508,17 @@ nano notes/week1_day1_git_wsl.md
 ## 18. 最常用 Git 命令总结
 
 ```
-git--version
-git config--global--list
+git --version
+git config --global --list
 git init
 git status
 git add README.md
 git add .
-git commit-m"message"
-git log--oneline
-gitdiff
+git commit -m "message"
+git log --oneline
+git diff
 git branch
-git switch-c dev
+git switch -c dev
 git push
 git pull
 ```
@@ -580,7 +580,7 @@ git pull
 ```
 git status
 git add .
-git commit-m"说明"
+git commit -m "说明"
 git push
 ```
 
@@ -590,7 +590,7 @@ git push
 pwd
 ls
 cd
-mkdir-p
+mkdir -p
 touch
 cat
 ```
@@ -599,7 +599,7 @@ cat
 
 ```
 git add .
-git commit-m"first commit"
-git branch-M main
-git push-u origin main
+git commit -m "first commit"
+git branch -M main
+git push -u origin main
 ```

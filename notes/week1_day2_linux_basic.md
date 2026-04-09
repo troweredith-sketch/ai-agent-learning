@@ -24,8 +24,8 @@
 
 ```
 ls
-ls-l
-ls-la
+ls -l
+ls -la
 ```
 
 - `ls`：普通查看
@@ -64,7 +64,7 @@ cd ~
 
 ```
 mkdir test
-mkdir-p linux-practice/day2
+mkdir -p linux-practice/day2
 ```
 
 ### `p` 的作用
@@ -77,7 +77,7 @@ mkdir-p linux-practice/day2
 例如：
 
 ```
-mkdir-p linux-practice/day2
+mkdir -p linux-practice/day2
 ```
 
 意思是：
@@ -99,8 +99,8 @@ mkdir-p linux-practice/day2
 
 ```
 rm a.txt
-rm-r notes
-rm-rf temp
+rm -r notes
+rm -rf temp
 ```
 
 - `rm a.txt`：删除文件
@@ -121,7 +121,7 @@ rm-rf temp
 ```
 cp a.txt b.txt
 cp a.txt notes/
-cp-r dir1 dir2
+cp -r dir1 dir2
 ```
 
 - `cp a.txt b.txt`：复制文件并改名
@@ -160,7 +160,7 @@ cat README.md
 也可以配合重定向写入内容。
 
 ```
-echo"hello linux" > a.txt
+echo "hello linux" > a.txt
 cat a.txt
 ```
 
@@ -179,7 +179,7 @@ touch a.txt
 ### 方法 2：创建文件并写入一行内容
 
 ```
-echo"hello" > a.txt
+echo "hello" > a.txt
 ```
 
 `>` 表示覆盖写入。
@@ -189,7 +189,7 @@ echo"hello" > a.txt
 ### 方法 3：追加内容
 
 ```
-echo"more content" >> a.txt
+echo "more content" >> a.txt
 ```
 
 `>>` 表示追加。
@@ -273,7 +273,7 @@ ls ..
 用下面命令查看权限：
 
 ```
-ls-l
+ls -l
 ```
 
 可能会看到：
@@ -350,7 +350,7 @@ drwxr-xr-x
 家目录：
 
 ```
-echo$HOME
+echo $HOME
 ```
 
 ---
@@ -360,7 +360,7 @@ echo$HOME
 当前用户名：
 
 ```
-echo$USER
+echo $USER
 ```
 
 ---
@@ -370,7 +370,7 @@ echo$USER
 当前目录：
 
 ```
-echo$PWD
+echo $PWD
 ```
 
 ---
@@ -380,7 +380,7 @@ echo$PWD
 命令查找路径：
 
 ```
-echo$PATH
+echo $PATH
 ```
 
 例如输出：
@@ -407,7 +407,7 @@ echo$PATH
 
 ```
 cd ~
-mkdir-p linux-practice/day2
+mkdir -p linux-practice/day2
 cd linux-practice/day2
 ```
 
@@ -424,8 +424,8 @@ mkdir notes temp
 ### 创建文件
 
 ```
-echo"Linux command practice" > intro.txt
-echo"Today I learned ls cd pwd mkdir rm cp mv cat" > notes/day2.txt
+echo "Linux command practice" > intro.txt
+echo "Today I learned ls cd pwd mkdir rm cp mv cat" > notes/day2.txt
 ```
 
 ---
@@ -466,7 +466,7 @@ mv intro.txt readme.txt
 ### 复制目录
 
 ```
-cp-r notes notes_copy
+cp -r notes notes_copy
 ```
 
 ---
@@ -475,8 +475,8 @@ cp-r notes notes_copy
 
 ```
 rm readme.txt
-rm-r notes_copy
-rm-r temp
+rm -r notes_copy
+rm -r temp
 ```
 
 ---
@@ -523,13 +523,13 @@ git status
 
 ```
 git add README.md
-git commit-m"docs: update README"
+git commit -m "docs: update README"
 
 git add .gitignore
-git commit-m"chore: add .gitignore"
+git commit -m "chore: add .gitignore"
 
 git add notes/week1_day2_linux_basic.md
-git commit-m"docs: add week1 day2 linux basic notes"
+git commit -m "docs: add week1 day2 linux basic notes"
 ```
 
 重点理解：
@@ -548,7 +548,7 @@ git commit-m"docs: add week1 day2 linux basic notes"
 
 ```
 git add projects/day02-linux-practice
-git commit-m"feat: add day02 linux practice"
+git commit -m "feat: add day02 linux practice"
 ```
 
 这表示：
@@ -606,7 +606,7 @@ git add projects/day02-linux-practice
 第一次推送时，Git 往往还不知道当前分支要推到哪里，所以通常要先执行：
 
 ```
-git push-u origin main
+git push -u origin main
 ```
 
 以后建立好追踪关系后，就可以直接：
@@ -624,7 +624,7 @@ git push
 ```
 pwd
 ls
-ls-la
+ls -la
 cd notes
 cd ..
 cd ~
@@ -634,7 +634,7 @@ cd ~
 
 ```
 mkdir test
-mkdir-p a/b/c
+mkdir -p a/b/c
 touch a.txt
 ```
 
@@ -642,8 +642,8 @@ touch a.txt
 
 ```
 cat a.txt
-echo"hello" > a.txt
-echo"world" >> a.txt
+echo "hello" > a.txt
+echo "world" >> a.txt
 ```
 
 ### 复制
@@ -651,7 +651,7 @@ echo"world" >> a.txt
 ```
 cp a.txt b.txt
 cp a.txt notes/
-cp-r dir1 dir2
+cp -r dir1 dir2
 ```
 
 ### 移动 / 重命名
@@ -665,17 +665,17 @@ mv old.txt new.txt
 
 ```
 rm a.txt
-rm-r notes
-rm-rf temp
+rm -r notes
+rm -rf temp
 ```
 
 ### 环境变量
 
 ```
-echo$HOME
-echo$USER
-echo$PWD
-echo$PATH
+echo $HOME
+echo $USER
+echo $PWD
+echo $PATH
 ```
 
 ### Git
@@ -684,7 +684,7 @@ echo$PATH
 git status
 git add 文件名
 git add 目录名
-git commit-m"message"
+git commit -m "message"
 git push
 ```
 

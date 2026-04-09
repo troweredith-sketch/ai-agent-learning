@@ -176,22 +176,24 @@ projects/python_template/
 示例代码：
 
 ```
-fromdotenvimportload_dotenv
-frompydanticimportBaseModel
-importos
+from dotenv import load_dotenv
+from pydantic import BaseModel
+import os
 
 load_dotenv()
 
-classAppConfig(BaseModel):
-app_name:str="Python Template"
-app_env:str="development"
-author:str="we"
 
-defload_config() ->AppConfig:
-returnAppConfig(
-app_name=os.getenv("APP_NAME","Python Template"),
-app_env=os.getenv("APP_ENV","development"),
-author=os.getenv("AUTHOR","we"),
+class AppConfig(BaseModel):
+    app_name: str = "Python Template"
+    app_env: str = "development"
+    author: str = "we"
+
+
+def load_config() -> AppConfig:
+    return AppConfig(
+        app_name=os.getenv("APP_NAME", "Python Template"),
+        app_env=os.getenv("APP_ENV", "development"),
+        author=os.getenv("AUTHOR", "we"),
     )
 ```
 
@@ -223,7 +225,7 @@ AUTHOR=we
 这句：
 
 ```
-classAppConfig(BaseModel):
+class AppConfig(BaseModel):
 ```
 
 意思是：
@@ -243,10 +245,10 @@ classAppConfig(BaseModel):
 ### 3. `AppConfig`
 
 ```
-classAppConfig(BaseModel):
-app_name:str="Python Template"
-app_env:str="development"
-author:str="we"
+class AppConfig(BaseModel):
+    app_name: str = "Python Template"
+    app_env: str = "development"
+    author: str = "we"
 ```
 
 表示这个配置对象有 3 个字段：
@@ -268,7 +270,7 @@ author:str="we"
 ### 4. `load_config()`
 
 ```
-defload_config() ->AppConfig:
+def load_config() -> AppConfig:
 ```
 
 表示定义一个函数，这个函数返回一个 `AppConfig` 对象。
@@ -310,8 +312,8 @@ os.getenv("APP_ENV","development")
 示例代码：
 
 ```
-defbuild_message(app_name:str,app_env:str,author:str) ->str:
-returnf"应用：{app_name} | 环境：{app_env} | 作者：{author}"
+def build_message(app_name: str, app_env: str, author: str) -> str:
+    return f"应用：{app_name} | 环境：{app_env} | 作者：{author}"
 ```
 
 ---
@@ -356,16 +358,18 @@ build_message("DemoApp","dev","we")
 示例代码：
 
 ```
-fromsrc.configimportload_config
-fromsrc.utilsimportbuild_message
+from src.config import load_config
+from src.utils import build_message
 
-defmain() ->None:
-config=load_config()
-message=build_message(config.app_name,config.app_env,config.author)
-print(message)
 
-if__name__=="__main__":
-main()
+def main() -> None:
+    config = load_config()
+    message = build_message(config.app_name, config.app_env, config.author)
+    print(message)
+
+
+if __name__ == "__main__":
+    main()
 ```
 
 ---
@@ -373,8 +377,8 @@ main()
 ### 1. 导入
 
 ```
-fromsrc.configimportload_config
-fromsrc.utilsimportbuild_message
+from src.config import load_config
+from src.utils import build_message
 ```
 
 意思是：
@@ -392,7 +396,7 @@ fromsrc.utilsimportbuild_message
 ### 2. `main()` 函数
 
 ```
-defmain() ->None:
+def main() -> None:
 ```
 
 表示定义程序主流程函数。
@@ -408,13 +412,13 @@ defmain() ->None:
 ### 3. 执行流程
 
 ```
-config=load_config()
+config = load_config()
 ```
 
 从 `config.py` 获取配置对象。
 
 ```
-message=build_message(config.app_name,config.app_env,config.author)
+message = build_message(config.app_name, config.app_env, config.author)
 ```
 
 把配置对象中的值交给工具函数。
@@ -430,8 +434,8 @@ print(message)
 ### 4. `if __name__ == "__main__"`
 
 ```
-if__name__=="__main__":
-main()
+if __name__ == "__main__":
+    main()
 ```
 
 意思是：
@@ -456,18 +460,20 @@ main()
 示例代码：
 
 ```
-importunittest
-fromsrc.utilsimportbuild_message
+import unittest
+from src.utils import build_message
 
-classTestUtils(unittest.TestCase):
-deftest_build_message(self):
-message=build_message("DemoApp","dev","we")
-self.assertIn("DemoApp",message)
-self.assertIn("dev",message)
-self.assertIn("we",message)
 
-if__name__=="__main__":
-unittest.main()
+class TestUtils(unittest.TestCase):
+    def test_build_message(self):
+        message = build_message("DemoApp", "dev", "we")
+        self.assertIn("DemoApp", message)
+        self.assertIn("dev", message)
+        self.assertIn("we", message)
+
+
+if __name__ == "__main__":
+    unittest.main()
 ```
 
 ---
@@ -481,7 +487,7 @@ unittest.main()
 ### 2. `TestUtils`
 
 ```
-classTestUtils(unittest.TestCase):
+class TestUtils(unittest.TestCase):
 ```
 
 定义一个测试类，继承 `unittest.TestCase`。
@@ -491,7 +497,7 @@ classTestUtils(unittest.TestCase):
 ### 3. `test_build_message`
 
 ```
-deftest_build_message(self):
+def test_build_message(self):
 ```
 
 这是一个测试方法。
@@ -503,7 +509,7 @@ deftest_build_message(self):
 ### 4. 测试内容
 
 ```
-message=build_message("DemoApp","dev","we")
+message = build_message("DemoApp", "dev", "we")
 ```
 
 调用 `build_message()`，生成结果。
@@ -511,9 +517,9 @@ message=build_message("DemoApp","dev","we")
 然后检查：
 
 ```
-self.assertIn("DemoApp",message)
-self.assertIn("dev",message)
-self.assertIn("we",message)
+self.assertIn("DemoApp", message)
+self.assertIn("dev", message)
+self.assertIn("we", message)
 ```
 
 意思是：
@@ -635,7 +641,8 @@ API_KEY=abc123
 然后 Python 程序通过：
 
 ```
-fromdotenvimportload_dotenv
+from dotenv import load_dotenv
+
 load_dotenv()
 ```
 

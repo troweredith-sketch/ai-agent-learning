@@ -73,7 +73,7 @@
 最常见的命令是：
 
 ```
-python3-m venv .venv
+python3 -m venv .venv
 ```
 
 这条命令的意思是：
@@ -132,7 +132,7 @@ pip install requests
 这样别人拿到项目后，只要执行：
 
 ```
-pip install-r requirements.txt
+pip install -r requirements.txt
 ```
 
 就可以快速安装项目依赖。
@@ -199,14 +199,14 @@ cd ~/ai-agent-learning/projects
 ### 第二步：创建模板项目目录
 
 ```
-mkdir-p python_template/app
+mkdir -p python_template/app
 cd python_template
 ```
 
 ### 第三步：创建虚拟环境
 
 ```
-python3-m venv .venv
+python3 -m venv .venv
 ```
 
 ### 第四步：激活虚拟环境
@@ -313,7 +313,7 @@ __pycache__/
 ### 创建虚拟环境
 
 ```
-python3-m venv .venv
+python3 -m venv .venv
 ```
 
 ### 激活虚拟环境
@@ -386,7 +386,7 @@ cd my_project
 ### 2. 创建虚拟环境
 
 ```
-python3-m venv .venv
+python3 -m venv .venv
 ```
 
 ### 3. 激活虚拟环境
