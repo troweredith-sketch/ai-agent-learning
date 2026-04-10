@@ -93,3 +93,29 @@ E. 当前阶段暂不做
 - 第一版暂不处理学号重复校验
 - 第一版暂不做严格输入校验
 - 学号重复检查由 `StudentManager` 负责
+
+## StudentManager 类
+
+### 作用
+管理多个 Student 对象，负责学生信息的增删改查。
+
+### 属性
+- students：用于保存所有 Student 对象的列表
+
+### 第一版方法
+- `find_student_by_id(student_id)`
+  - 根据学号查找学生
+- `add_student(student)`
+  - 添加学生对象，学号重复时返回失败
+- `remove_student(student_id)`
+  - 根据学号删除学生
+- `update_student(student_id, name=None, age=None, gender=None, score=None)`
+  - 根据学号修改学生信息，未传入的字段保持不变
+- `get_all_students()`
+  - 获取当前所有学生对象
+
+### 当前设计说明
+- 内部使用列表保存学生对象
+- 学号唯一
+- 删除和修改操作都基于学号查找
+- 第一版返回布尔值表示操作是否成功
