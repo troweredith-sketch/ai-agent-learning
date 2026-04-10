@@ -11,18 +11,33 @@ def show_menu():
     print("0. 退出系统")
 
 def input_student_info():
-    student_id = input("请输入学号: ").strip()
-    name = input("请输入姓名：").strip()
-    input("请输入学号: ").strip()
-
-    try:
-        age = int(input("请输入年龄: ").strip())
-        score = float(input("请输入成绩: ").strip())
-    except ValueError:
-        print("年龄或成绩输入格式不正确！")
+    student_id = input("请输入学号：").strip()
+    if not student_id:
+        print("学号不能为空！")
         return None
-    
-    gender = input("请输入性别: ").strip()
+
+    name = input("请输入姓名：").strip()
+    if not name:
+        print("姓名不能为空！")
+        return None
+
+    while True:
+        age_input = input("请输入年龄：").strip()
+        try:
+            age = int(age_input)
+            break
+        except ValueError:
+            print("年龄输入格式不正确，请重新输入！")
+
+    while True:
+        score_input = input("请输入成绩：").strip()
+        try:
+            score = float(score_input)
+            break
+        except ValueError:
+            print("成绩输入格式不正确，请重新输入！")
+
+    gender = input("请输入性别：").strip()
 
     return student_id, name, age, gender, score
 
