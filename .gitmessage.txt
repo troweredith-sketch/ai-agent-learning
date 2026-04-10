@@ -1,0 +1,22 @@
+<type>(<scope>): <summary>
+
+【本次目标】
+- 
+
+【本次修改】
+- 
+
+【为什么这样改】
+- 
+
+【自测情况】
+- [ ] 未测试
+- [ ] 已测试，结果已记录到 docs/TESTLOG.md
+
+【关联文档】
+- DESIGN.md:
+- DEVLOG.md:
+- TESTLOG.md:
+
+【下一步】
+- 
