@@ -34,6 +34,7 @@ class StudentManager:
             student.gender = gender
         if score is not None:
             student.score = score
+        
 
         return True
     
