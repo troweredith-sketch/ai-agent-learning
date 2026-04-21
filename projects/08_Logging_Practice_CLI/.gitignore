@@ -1,0 +1,4 @@
+*.log
+logs/
+practice_result.txt
+__pycache__/
