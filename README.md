@@ -30,6 +30,7 @@
 
 - Day 1：函数设计、参数和返回值、类型标注、docstring 基础
 - Day 2：异常处理、`try/except`、自定义错误提示、异常的抛出与捕获
+- Day 3：`logging` 基础、`info / warning / error`、控制台日志与文件日志
 
 ## 项目索引
 
@@ -39,6 +40,7 @@
 - `05_Student_Management_System`：控制台学生管理系统，练习类设计和 CRUD
 - `06_Refactoring_Exercise_Script_Shopping_List_Statistics`：购物清单统计脚本重构练习
 - `07_Exception_Handling_CLI`：异常处理命令行脚本，练习输入校验与错误恢复
+- `08_Logging_Practice_CLI`：logging 基础练习脚本，包含控制台日志、文件日志和双输出示例
 
 ## 笔记索引
 
@@ -49,16 +51,27 @@
 - [Week 1 Day 5 - Git 工作流](notes/week1_day5_git_workflow.md)
 - [Week 2 Day 1 - 函数设计、类型标注、docstring 基础](notes/week2_day1_typing_function.md)
 - [Week 2 Day 2 - 异常处理、try/except、自定义错误提示](notes/week2_day2_exception.md)
+- [Week 2 Day 3 - logging 基础、日志级别、日志输出到文件](notes/week2_day3_logging.md)
 
 ## 本周最新产出
 
 - [Week 2 Day 2 学习笔记](notes/week2_day2_exception.md)：整理异常处理核心概念、常见异常类型和 `raise` / `except` 的职责分工
 - [异常处理练习脚本](projects/07_Exception_Handling_CLI/exception_cli.py)：实现命令行输入、错误提示、重试逻辑与退出处理
+- [Week 2 Day 3 学习笔记](notes/week2_day3_logging.md)：整理 `logging` 的最基础用法、日志级别和输出方式
+- [logging 基础练习目录](projects/08_Logging_Practice_CLI)：包含最简单的控制台日志、文件日志和同时输出示例
 
 ## 运行示例
 
-在仓库根目录可以直接运行今天的练习脚本：
+在仓库根目录可以直接运行今天的 logging 练习脚本：
 
 ```bash
-python3 projects/07_Exception_Handling_CLI/exception_cli.py
+python3 projects/08_Logging_Practice_CLI/logging_basic_simple.py
+python3 projects/08_Logging_Practice_CLI/logging_to_file_simple.py
+python3 projects/08_Logging_Practice_CLI/logging_console_and_file_simple.py
+```
+
+如果想继续练更完整一点的命令行例子，也可以运行：
+
+```bash
+python3 projects/08_Logging_Practice_CLI/logging_practice.py
 ```
