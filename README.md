@@ -31,6 +31,7 @@
 - Day 1：函数设计、参数和返回值、类型标注、docstring 基础
 - Day 2：异常处理、`try/except`、自定义错误提示、异常的抛出与捕获
 - Day 3：`logging` 基础、`info / warning / error`、控制台日志与文件日志
+- Day 4：配置管理、`.env`、环境变量、`python-dotenv`、不要把 key 写死在代码里
 
 ## 项目索引
 
@@ -41,6 +42,7 @@
 - `06_Refactoring_Exercise_Script_Shopping_List_Statistics`：购物清单统计脚本重构练习
 - `07_Exception_Handling_CLI`：异常处理命令行脚本，练习输入校验与错误恢复
 - `08_Logging_Practice_CLI`：logging 基础练习脚本，包含控制台日志、文件日志和双输出示例
+- `09_Env_Config_Practice`：配置管理与环境变量练习项目，练习 `.env`、`python-dotenv` 和 `config.py`
 
 ## 笔记索引
 
@@ -52,6 +54,7 @@
 - [Week 2 Day 1 - 函数设计、类型标注、docstring 基础](notes/week2_day1_typing_function.md)
 - [Week 2 Day 2 - 异常处理、try/except、自定义错误提示](notes/week2_day2_exception.md)
 - [Week 2 Day 3 - logging 基础、日志级别、日志输出到文件](notes/week2_day3_logging.md)
+- [Week 2 Day 4 - 配置管理、`.env`、环境变量、不要把 key 写死在代码里](notes/week2_day4_env_config.md)
 
 ## 本周最新产出
 
@@ -59,6 +62,8 @@
 - [异常处理练习脚本](projects/07_Exception_Handling_CLI/exception_cli.py)：实现命令行输入、错误提示、重试逻辑与退出处理
 - [Week 2 Day 3 学习笔记](notes/week2_day3_logging.md)：整理 `logging` 的最基础用法、日志级别和输出方式
 - [logging 基础练习目录](projects/08_Logging_Practice_CLI)：包含最简单的控制台日志、文件日志和同时输出示例
+- [Week 2 Day 4 学习笔记](notes/week2_day4_env_config.md)：整理配置管理、`.env`、环境变量和为什么不能把 key 写死在代码里
+- [环境变量练习项目](projects/09_Env_Config_Practice/README.md)：从 `.env`、`python-dotenv` 到 `config.py` 的完整最小练习
 
 ## 运行示例
 
