@@ -32,6 +32,7 @@
 - Day 2：异常处理、`try/except`、自定义错误提示、异常的抛出与捕获
 - Day 3：`logging` 基础、`info / warning / error`、控制台日志与文件日志
 - Day 4：配置管理、`.env`、环境变量、`python-dotenv`、不要把 key 写死在代码里
+- Day 5：Pydantic 基础、数据校验、schema 概念、`TodoItem` 数据模型
 
 ## 项目索引
 
@@ -43,6 +44,7 @@
 - `07_Exception_Handling_CLI`：异常处理命令行脚本，练习输入校验与错误恢复
 - `08_Logging_Practice_CLI`：logging 基础练习脚本，包含控制台日志、文件日志和双输出示例
 - `09_Env_Config_Practice`：配置管理与环境变量练习项目，练习 `.env`、`python-dotenv` 和 `config.py`
+- `10_Pydantic_Todo_Practice`：Pydantic 基础练习项目，围绕 `TodoItem` 练习数据建模、校验和 schema
 
 ## 笔记索引
 
@@ -55,6 +57,7 @@
 - [Week 2 Day 2 - 异常处理、try/except、自定义错误提示](notes/week2_day2_exception.md)
 - [Week 2 Day 3 - logging 基础、日志级别、日志输出到文件](notes/week2_day3_logging.md)
 - [Week 2 Day 4 - 配置管理、`.env`、环境变量、不要把 key 写死在代码里](notes/week2_day4_env_config.md)
+- [Week 2 Day 5 - Pydantic 基础、数据校验、schema 概念](notes/week2_day5_pydantic.md)
 
 ## 本周最新产出
 
@@ -64,6 +67,8 @@
 - [logging 基础练习目录](projects/08_Logging_Practice_CLI)：包含最简单的控制台日志、文件日志和同时输出示例
 - [Week 2 Day 4 学习笔记](notes/week2_day4_env_config.md)：整理配置管理、`.env`、环境变量和为什么不能把 key 写死在代码里
 - [环境变量练习项目](projects/09_Env_Config_Practice/README.md)：从 `.env`、`python-dotenv` 到 `config.py` 的完整最小练习
+- [Week 2 Day 5 学习笔记](notes/week2_day5_pydantic.md)：整理 Pydantic 基础、数据校验、schema 和 `TodoItem` 模型
+- [Pydantic Todo 练习项目](projects/10_Pydantic_Todo_Practice/README.md)：把 `TodoItem`、demo 和测试放到同一个 Day 5 项目里
 
 ## 运行示例
 
